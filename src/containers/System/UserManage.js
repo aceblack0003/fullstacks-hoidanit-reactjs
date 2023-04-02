@@ -53,31 +53,33 @@ class UserManage extends Component {
                 </div>
                 <div className='users-table mt-4 mx-2'>
                     <table id="customers">
-                        <tr>
-                            <th>Email</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Address</th>
-                            <th>Action</th>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Email</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
 
-                        {arrUsers && arrUsers.map((item, index) => {
-                            console.log('check map: ', item, index);
-                            return (
-                                <tr>
-                                    <td>{item.email}</td>
-                                    <td>{item.firstName}</td>
-                                    <td>{item.lastName}</td>
-                                    <td>{item.address}</td>
-                                    <td>
-                                        <button className='btn-edit'><i class="fas fa-pencil-alt"></i></button>
-                                        <button className='btn-delete'><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                            )
-                        })
+                            {arrUsers && arrUsers.map((item, index) => {
+                                console.log('check map: ', item, index);
+                                return (
+                                    <tr>
+                                        <td>{item.email}</td>
+                                        <td>{item.firstName}</td>
+                                        <td>{item.lastName}</td>
+                                        <td>{item.address}</td>
+                                        <td>
+                                            <button className='btn-edit'><i className="fas fa-pencil-alt"></i></button>
+                                            <button className='btn-delete'><i className="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                )
+                            })
 
-                        }
+                            }
+                        </tbody>
 
 
 
